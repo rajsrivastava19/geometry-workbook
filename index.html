@@ -813,48 +813,56 @@
         id: 'polygon_concept', name: 'Polygon', category: 'concept',
         def: 'A Polygon is a flat (2D) closed shape with straight sides. It cannot have curves and cannot have gaps.',
         props: ['Example 1: Triangle', 'Example 2: Square', 'Example 3: Rectangle', 'Example 4: Pentagon', 'Example 5: Hexagon'],
+        explanation: 'A polygon is a flat shape with straight sides that is completely closed, like a fence.',
         svg: mkSvg(`<path d="M20,20 L80,20 L90,50 L60,90 L10,80 Z" fill="#FFE082"/><text x="25" y="60" font-size="10" stroke="none" fill="black">Straight Sides</text>`)
       },
       {
         id: 'quadrilateral_concept', name: 'Quadrilateral', category: 'concept',
         def: 'A Quadrilateral is any polygon with exactly 4 sides and 4 vertices. "Quad" means four.',
         props: ['Example 1: Square', 'Example 2: Rectangle', 'Example 3: Parallelogram', 'Example 4: Rhombus', 'Example 5: Trapezoid'],
+        explanation: 'A quadrilateral is a polygon with exactly 4 sides. "Quad" means four, like a quad bike.',
         svg: mkSvg(`<polygon points="10,80 30,20 90,20 70,80" fill="#B39DDB"/><text x="35" y="55" font-size="12" stroke="none" fill="black">4 Sides</text>`)
       },
       {
         id: 'vertex_concept', name: 'Vertex / Vertices', category: 'concept',
         def: 'A Vertex is a corner where two or more straight lines meet. "Vertices" means more than one vertex.',
         props: ['Tip: Count the sharp corners!'],
+        explanation: 'A vertex is a corner where sides meet. It is the pointy part!',
         svg: mkSvg(`<polygon points="20,80 50,20 80,80" /><circle cx="50" cy="20" r="8" fill="red" stroke="none"/><line x1="80" y1="20" x2="55" y2="20" stroke="red" stroke-width="3" marker-end="url(#arrow)"/><text x="60" y="15" font-size="12" stroke="none" fill="red">Vertex</text>`)
       },
       {
         id: 'edge_concept', name: 'Edge', category: 'concept',
         def: 'An Edge is a straight line segment where two faces of a solid shape meet.',
         props: ['Tip: It is the line connecting corners.'],
+        explanation: 'An edge is a straight line that connects two corners.',
         svg: mkSvg(`<rect x="25" y="25" width="50" height="50" stroke="#ccc"/><line x1="25" y1="25" x2="75" y2="25" stroke="red" stroke-width="5"/><text x="30" y="15" font-size="12" stroke="none" fill="red">Edge</text>`)
       },
       {
         id: 'base_concept', name: 'Base', category: 'concept',
         def: 'The Base is the bottom face of a shape, or the two matching ends of a prism.',
         props: ['Example: The circle at the bottom of a cone.'],
+        explanation: 'The base is the bottom side that a shape rests on.',
         svg: mkSvg(`<ellipse cx="50" cy="75" rx="30" ry="10" fill="red"/><line x1="20" y1="75" x2="50" y2="5"/><line x1="80" y1="75" x2="50" y2="5"/><text x="50" y="95" font-size="10" text-anchor="middle" stroke="none" fill="black">Base</text>`)
       },
       {
         id: 'congruent_concept', name: 'Congruent', category: 'concept',
         def: 'Congruent means "Exactly the Same". Same Size AND Same Shape.',
         props: ['If you stack them, they match perfectly.'],
+        explanation: 'Congruent means exactly the same size and shape. Like identical twins!',
         svg: mkSvg(`<rect x="10" y="30" width="30" height="30" fill="#81C784"/><rect x="60" y="30" width="30" height="30" fill="#81C784"/><text x="50" y="80" font-size="10" text-anchor="middle" stroke="none" fill="black">Same Size & Shape</text>`)
       },
       {
         id: '2d3d_concept', name: '2D vs 3D', category: 'concept',
         def: '2D objects are flat (like a drawing). 3D objects are solid (like a block).',
         props: ['2D: Square, Triangle', '3D: Cube, Square Pyramid'],
+        explanation: '2D shapes are flat like a drawing. 3D shapes are solid like a block you can hold.',
         svg: mkSvg(`<rect x="5" y="30" width="40" height="40" fill="#eee"/><text x="15" y="55" stroke="none" fill="black">2D</text><rect x="60" y="35" width="30" height="30" fill="#ccc"/><polyline points="60,35 70,25 100,25 100,55 90,65"/><line x1="100" y1="25" x2="90" y2="35"/><text x="70" y="55" stroke="none" fill="black">3D</text>`)
       },
       {
         id: 'symmetry_concept', name: 'Symmetry', category: 'concept',
         def: 'Symmetry is when one side of a shape is a mirror image of the other side.',
         props: ['Example: A butterfly or a heart.'],
+        explanation: 'Symmetry is when one side is a mirror image of the other, like a butterfly wings.',
         svg: mkSvg(`<path d="M50,30 C30,10 10,20 10,40 C10,60 30,50 50,70 C70,50 90,60 90,40 C90,20 70,10 50,30 Z" fill="#FBCFE8" stroke="#DB2777" stroke-width="2"/><line x1="50" y1="10" x2="50" y2="90" stroke="#DB2777" stroke-width="2" stroke-dasharray="4"/><circle cx="50" cy="35" r="2" fill="#DB2777"/>`),
         detailSvg: mkSvg(`<g transform="translate(0,0)"><path d="M50,30 C30,10 10,20 10,40 C10,60 30,50 50,70 C70,50 90,60 90,40 C90,20 70,10 50,30 Z" fill="#FBCFE8" stroke="#DB2777" stroke-width="2" transform="scale(0.5) translate(20,40)"/><line x1="35" y1="20" x2="35" y2="80" stroke="#DB2777" stroke-width="2" stroke-dasharray="4"/></g><g transform="translate(50,0)"><path d="M50,30 Q30,0 10,30 Q30,60 50,50 Q70,60 90,30 Q70,0 50,30 Z" fill="#A78BFA" stroke="#7C3AED" stroke-width="2" transform="scale(0.5) translate(0,40)"/><line x1="25" y1="20" x2="25" y2="80" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4"/></g>`)
       },
@@ -862,12 +870,14 @@
         id: 'right_angle_concept', name: 'Right Angle', category: 'concept',
         def: 'A Right Angle is an angle of exactly 90 degrees, like the corner of a square.',
         props: ['Symbol: A small square in the corner.'],
+        explanation: 'A right angle is a perfect "L" shape corner, like the corner of a book.',
         svg: mkSvg(`<line x1="20" y1="80" x2="80" y2="80" stroke="black"/><line x1="20" y1="80" x2="20" y2="20" stroke="black"/><rect x="20" y="60" width="20" height="20" fill="none" stroke="red"/>`)
       },
       {
         id: 'parallel_concept', name: 'Parallel Lines', category: 'concept',
         def: 'Parallel lines are lines that never touch, no matter how far they go. Like train tracks.',
         props: ['Symbol: Arrows on the lines.'],
+        explanation: 'Parallel lines never touch, no matter how far they go. Like train tracks.',
         svg: mkSvg(`<line x1="10" y1="30" x2="90" y2="30" stroke="#333" stroke-width="4"/><line x1="10" y1="70" x2="90" y2="70" stroke="#333" stroke-width="4"/><path d="M45,30 L50,25 M45,30 L50,35" stroke="#333" stroke-width="3" fill="none"/><path d="M45,70 L50,65 M45,70 L50,75" stroke="#333" stroke-width="3" fill="none"/>`),
         detailSvg: mkSvg(`<g transform="translate(0,0)"><line x1="10" y1="30" x2="45" y2="30" stroke="#333" stroke-width="4"/><line x1="10" y1="70" x2="45" y2="70" stroke="#333" stroke-width="4"/><path d="M25,30 L30,25 M25,30 L30,35" stroke="#333" stroke-width="3" fill="none"/><path d="M25,70 L30,65 M25,70 L30,75" stroke="#333" stroke-width="3" fill="none"/></g><g transform="translate(50,0)"><line x1="0" y1="30" x2="40" y2="30" stroke="#333" stroke-width="4"/><line x1="0" y1="70" x2="40" y2="70" stroke="#333" stroke-width="4"/><line x1="10" y1="30" x2="10" y2="70" stroke="#8D6E63" stroke-width="6"/><line x1="30" y1="30" x2="30" y2="70" stroke="#8D6E63" stroke-width="6"/></g>`)
       }
@@ -879,6 +889,7 @@
         id: 'triangle', name: 'Triangle', category: '2d',
         def: 'A shape with 3 sides and 3 vertices.',
         props: ['Sides: 3', 'Vertices: 3'],
+        explanation: 'A triangle has 3 sides and 3 corners. "Tri" means three, like a tricycle.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,15 90,85 10,85" fill="#60A5FA"/></svg>',
         points: [[50, 15], [90, 85], [10, 85]]
       },
@@ -886,6 +897,7 @@
         id: 'square', name: 'Square', category: '2d', isQuad: true,
         def: '4 equal sides and 4 right angles.',
         props: ['Sides: 4', 'Vertices: 4', 'Parallel Sides: 2 pairs'],
+        explanation: 'A square has 4 equal sides and 4 right angles. It looks like a box.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><rect x="20" y="20" width="60" height="60" fill="#34D399"/></svg>',
         points: [[20, 20], [80, 20], [80, 80], [20, 80]], // TL, TR, BR, BL
         parallelPairs: [[0, 2], [1, 3]] // Indices of sides: Top(0) || Bottom(2), Right(1) || Left(3)
@@ -894,6 +906,7 @@
         id: 'rectangle', name: 'Rectangle', category: '2d', isQuad: true,
         def: '4 sides, opposite sides equal.',
         props: ['Sides: 4', 'Vertices: 4', 'Parallel Sides: 2 pairs'],
+        explanation: 'A rectangle has 4 sides with opposite sides equal. It looks like a stretched square.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><rect x="10" y="30" width="80" height="40" fill="#F472B6"/></svg>',
         points: [[10, 30], [90, 30], [90, 70], [10, 70]],
         parallelPairs: [[0, 2], [1, 3]]
@@ -902,6 +915,7 @@
         id: 'parallelogram', name: 'Parallelogram', category: '2d', isQuad: true,
         def: 'A quadrilateral with two pairs of parallel sides.',
         props: ['Sides: 4', 'Vertices: 4', 'Opposite sides parallel'],
+        explanation: 'A parallelogram has opposite sides that are parallel. It looks like a slanted rectangle.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="30,20 90,20 70,80 10,80" fill="#9013FE" opacity="0.6"/></svg>',
         points: [[30, 20], [90, 20], [70, 80], [10, 80]],
         parallelPairs: [[0, 2], [1, 3]]
@@ -910,6 +924,7 @@
         id: 'rhombus', name: 'Rhombus', category: '2d', isQuad: true,
         def: 'A quadrilateral with all four sides equal in length.',
         props: ['Sides: 4', 'Vertices: 4', 'All sides equal'],
+        explanation: 'A rhombus has 4 equal sides, like a diamond.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,10 90,50 50,90 10,50" fill="#F43F5E"/></svg>',
         points: [[50, 10], [90, 50], [50, 90], [10, 50]],
         parallelPairs: [[0, 2], [1, 3]]
@@ -918,6 +933,7 @@
         id: 'trapezoid', name: 'Trapezoid', category: '2d', isQuad: true,
         def: 'A quadrilateral with at least one pair of parallel sides.',
         props: ['Sides: 4', 'Vertices: 4', 'One Pair of Parallel Sides'],
+        explanation: 'A trapezoid has one pair of parallel sides. It looks like a table.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="30,30 70,30 90,80 10,80" fill="#B8E986"/></svg>',
         points: [[30, 30], [70, 30], [90, 80], [10, 80]],
         parallelPairs: [[0, 2]] // Top(0) || Bottom(2)
@@ -926,6 +942,7 @@
         id: 'pentagon', name: 'Pentagon', category: '2d',
         def: 'A polygon with 5 sides.',
         props: ['Sides: 5', 'Vertices: 5'],
+        explanation: 'A pentagon has 5 sides. "Penta" means five.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,10 90,40 75,90 25,90 10,40" fill="#A78BFA"/></svg>',
         points: [[50, 10], [90, 40], [75, 90], [25, 90], [10, 40]]
       },
@@ -933,6 +950,7 @@
         id: 'hexagon', name: 'Hexagon', category: '2d',
         def: 'A polygon with 6 sides.',
         props: ['Sides: 6', 'Vertices: 6'],
+        explanation: 'A hexagon has 6 sides. "Hexa" means six.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,10 85,30 85,70 50,90 15,70 15,30" fill="#FBBF24"/></svg>',
         points: [[50, 10], [85, 30], [85, 70], [50, 90], [15, 70], [15, 30]]
       },
@@ -940,6 +958,7 @@
         id: 'octagon', name: 'Octagon', category: '2d',
         def: 'A polygon with 8 sides.',
         props: ['Sides: 8', 'Vertices: 8'],
+        explanation: 'An octagon has 8 sides. "Octa" means eight, like an octopus!',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="30,10 70,10 90,30 90,70 70,90 30,90 10,70 10,30" fill="#FB923C"/></svg>',
         points: [[30, 10], [70, 10], [90, 30], [90, 70], [70, 90], [30, 90], [10, 70], [10, 30]]
       },
@@ -947,6 +966,7 @@
         id: 'star', name: 'Star', category: '2d',
         def: 'A shape with points radiating from center.',
         props: ['Vertices: 10', 'Sides: 10'],
+        explanation: 'A star has points sticking out from the center.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,10 61,35 90,35 68,55 78,85 50,70 22,85 32,55 10,35 39,35" fill="#FACC15"/></svg>',
         points: [[50, 10], [61, 35], [90, 35], [68, 55], [78, 85], [50, 70], [22, 85], [32, 55], [10, 35], [39, 35]]
       },
@@ -954,6 +974,7 @@
         id: 'circle', name: 'Circle', category: '2d',
         def: 'Round shape, no corners.',
         props: ['Vertices: 0', 'Sides: 0'],
+        explanation: 'A circle is perfectly round with no corners.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><circle cx="50" cy="50" r="40" fill="#60A5FA"/></svg>',
         points: [] // No vertices
       },
@@ -961,6 +982,7 @@
         id: 'oval', name: 'Oval', category: '2d',
         def: 'Elongated round shape.',
         props: ['Vertices: 0', 'Sides: 0'],
+        explanation: 'An oval is like a stretched circle, shaped like an egg.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><ellipse cx="50" cy="50" rx="45" ry="30" fill="#A78BFA"/></svg>',
         points: []
       },
@@ -968,6 +990,7 @@
         id: 'cube', name: 'Cube', category: '3d',
         def: 'A box with 6 square faces.',
         props: ['Faces: 6', 'Edges: 12', 'Vertices: 8'],
+        explanation: 'A cube is a box with 6 square faces, like a dice.',
         svg: mkSvg(`<rect x="20" y="35" width="50" height="50" fill="rgba(79, 70, 229, 0.2)" stroke="#333" stroke-width="2"/><polygon points="20,35 45,10 95,10 70,35" fill="rgba(79, 70, 229, 0.3)" stroke="#333" stroke-width="2"/><polygon points="70,35 95,10 95,60 70,85" fill="rgba(79, 70, 229, 0.4)" stroke="#333" stroke-width="2"/><line x1="20" y1="85" x2="70" y2="85" stroke="#333" stroke-width="2"/><line x1="70" y1="85" x2="70" y2="35" stroke="#333" stroke-width="2"/><line x1="20" y1="35" x2="20" y2="85" stroke="#333" stroke-width="2"/>`),
         points: [[20, 35], [70, 35], [70, 85], [20, 85], [45, 10], [95, 10], [95, 60]], // Front: 0,1,2,3. Back: 4,5,6,?
         faces: [[0, 1, 2, 3], [0, 4, 5, 1], [1, 5, 6, 2], [3, 2, 6], [0, 3], [4, 5]], // Simplified for click logic
@@ -977,6 +1000,7 @@
         id: 'sphere', name: 'Sphere', category: '3d',
         def: 'Perfectly round 3D shape.',
         props: ['Faces: 0 (1 curved)', 'Edges: 0', 'Vertices: 0'],
+        explanation: 'A sphere is perfectly round like a ball.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><circle cx="50" cy="50" r="45" fill="url(#sphereGrad)"/></svg>',
         points: [],
         faces: [],
@@ -986,6 +1010,7 @@
         id: 'cone', name: 'Cone', category: '3d',
         def: 'Circular base, points to top.',
         props: ['Faces: 2 (1 flat, 1 curved)', 'Edges: 1 (circular)', 'Vertices: 1 (tip)'],
+        explanation: 'A cone has a circle base and points to a tip, like an ice cream cone.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><polygon points="50,10 90,80 10,80" fill="#F59E0B"/><ellipse cx="50" cy="80" rx="40" ry="10" fill="#D97706" stroke="none"/></svg>',
         points: [[50, 10]],
         faces: [],
@@ -995,6 +1020,7 @@
         id: 'pyramid', name: 'Square Pyramid', category: '3d',
         def: 'A shape with a square base and 4 triangular faces meeting at a point.',
         props: ['Faces: 5', 'Edges: 8', 'Vertices: 5'],
+        explanation: 'A pyramid has a square base and triangular sides that meet at the top.',
         svg: mkSvg(`<polygon points="15,85 85,85 95,55 25,55" fill="rgba(200,200,200,0.3)" stroke="#333" stroke-dasharray="2"/><polygon points="15,85 85,85 50,10" fill="rgba(255, 100, 100, 0.5)" stroke="#333" stroke-width="2"/><polygon points="85,85 95,55 50,10" fill="rgba(200, 50, 50, 0.5)" stroke="#333" stroke-width="2"/><line x1="25" y1="55" x2="50" y2="10" stroke="#333" stroke-dasharray="2"/><line x1="25" y1="55" x2="15" y2="85" stroke="#333" stroke-dasharray="2"/>`),
         points: [[50, 10], [15, 85], [85, 85], [95, 55], [25, 55]], // Apex, FL, FR, BR, BL
         faces: [[0, 1, 2], [0, 2, 3], [0, 3, 4], [0, 4, 1], [1, 2, 3, 4]], // Front, Right, Back, Left, Base
@@ -1004,6 +1030,7 @@
         id: 'tri_prism', name: 'Triangular Prism', category: '3d',
         def: 'A prism with triangular bases. Like a Toblerone bar.',
         props: ['Faces: 5', 'Edges: 9', 'Vertices: 6'],
+        explanation: 'A triangular prism is like a Toblerone bar.',
         svg: mkSvg(`<polygon points="10,80 30,50 50,80" fill="rgba(100, 200, 255, 0.3)" stroke="#333" stroke-width="2"/><polygon points="10,80 30,50 80,30 60,60" fill="rgba(100, 200, 255, 0.2)" stroke="#333" stroke-width="2"/><polygon points="50,80 30,50 80,30 100,60" fill="rgba(100, 200, 255, 0.4)" stroke="#333" stroke-width="2"/><line x1="50" y1="80" x2="100" y2="60" stroke="#333" stroke-width="2"/><line x1="60" y1="60" x2="100" y2="60" stroke="#333" stroke-width="2"/><line x1="60" y1="60" x2="80" y2="30" stroke="#333" stroke-width="2" stroke-dasharray="4"/>`),
         points: [[30, 50], [10, 80], [50, 80], [80, 30], [60, 60], [100, 60]], // Front: 0,1,2. Back: 3,4,5
         faces: [[0, 1, 2], [3, 4, 5], [0, 1, 4, 3], [1, 2, 5, 4], [0, 2, 5, 3]], // Front, Back, Left, Bottom, Right
@@ -1013,6 +1040,7 @@
         id: 'cylinder', name: 'Cylinder', category: '3d',
         def: 'Two circular bases.',
         props: ['Faces: 3 (2 flat, 1 curved)', 'Edges: 2 (circular)', 'Vertices: 0'],
+        explanation: 'A cylinder has two circle bases, like a soda can.',
         svg: '<svg viewBox="0 0 100 100" class="shape-icon"><ellipse cx="50" cy="80" rx="40" ry="10" fill="#059669"/><rect x="10" y="20" width="80" height="60" fill="#10B981"/><ellipse cx="50" cy="20" rx="40" ry="10" fill="#34D399"/></svg>',
         points: [],
         faces: [],
@@ -1022,12 +1050,14 @@
         id: 'prism_def', name: 'Prism (General)', category: '3d',
         def: 'A 3D shape with 2 identical ends (bases) and flat rectangular sides.',
         props: ['Bases: 2 identical faces', 'Sides: Rectangles'],
+        explanation: 'A prism has two identical ends and flat sides.',
         svg: mkSvg(`<path d="M20,80 L50,20 L80,80 Z" fill="none" stroke="#333" stroke-dasharray="2"/><rect x="20" y="30" width="60" height="40" fill="#ccc" opacity="0.5"/><text x="30" y="55" font-size="10" stroke="none" fill="black">Rectangular Sides</text>`)
       },
       {
         id: 'rect_prism', name: 'Rectangular Prism', category: '3d',
         def: 'A box shape. It has 6 rectangular faces.',
         props: ['Faces: 6', 'Edges: 12', 'Vertices: 8'],
+        explanation: 'A rectangular prism is a box shape, like a cereal box.',
         svg: mkSvg(`<rect x="20" y="30" width="40" height="50" fill="rgba(80, 227, 194, 0.3)"/><polyline points="20,30 40,10 80,10 80,60 60,80"/><line x1="80" y1="10" x2="60" y2="30"/><line x1="60" y1="30" x2="60" y2="80"/><line x1="60" y1="30" x2="20" y2="30"/>`),
         points: [[20, 30], [60, 30], [60, 80], [20, 80], [40, 10], [80, 10], [80, 60], [40, 60]], // Front 4, Back 4
         faces: [[0, 1, 2, 3], [4, 5, 6, 7], [0, 1, 5, 4], [2, 3, 7, 6], [1, 2, 6, 5], [0, 3, 7, 4]],
@@ -1037,6 +1067,7 @@
         id: 'hex_prism', name: 'Hexagonal Prism', category: '3d',
         def: 'A Prism with 2 hexagon bases and 6 rectangular sides.',
         props: ['Faces: 8', 'Edges: 18', 'Vertices: 12'],
+        explanation: 'A hexagonal prism has hexagon ends and 6 rectangular sides.',
         svg: mkSvg(`<polygon points="35,15 65,15 80,30 65,45 35,45 20,30" fill="rgba(200,200,200,0.5)"/><line x1="20" y1="30" x2="20" y2="70"/><line x1="35" y1="45" x2="35" y2="85"/><line x1="65" y1="45" x2="65" y2="85"/><line x1="80" y1="30" x2="80" y2="70"/><polyline points="20,70 35,85 65,85 80,70"/>`),
         points: [[35, 15], [65, 15], [80, 30], [65, 45], [35, 45], [20, 30], [35, 55], [65, 55], [80, 70], [65, 85], [35, 85], [20, 70]], // Scaled down
         faces: [
@@ -1691,30 +1722,33 @@
       if (quizHistory.length > 5) quizHistory.shift();
 
       let qText = "";
-      let options = [];
+      let options = []; // Array of { content: string, item: object }
       let correctVal = "";
 
       if (qType === 0) {
         qText = `What is this? "${target.def}"`;
         correctVal = target.name;
-        options = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3).map(i => i.name);
-        options.push(correctVal);
+        // Get 3 wrong options
+        const wrong = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+        options = wrong.map(i => ({ content: i.name, item: i }));
+        options.push({ content: correctVal, item: target });
         document.getElementById('quizImage').innerHTML = '';
       } else if (qType === 1) {
         qText = `Which image shows: ${target.name}?`;
         correctVal = target.svg;
-        options = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3).map(i => i.svg);
-        options.push(correctVal);
+        const wrong = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+        options = wrong.map(i => ({ content: i.svg, item: i }));
+        options.push({ content: correctVal, item: target });
         document.getElementById('quizImage').innerHTML = '';
       } else if (qType === 2) {
         // Inverse: Which shape has X?
-        // Only for shapes with props
         if (!target.props || target.category === 'concept') {
           // Fallback to Type 0
           qText = `What is this? "${target.def}"`;
           correctVal = target.name;
-          options = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3).map(i => i.name);
-          options.push(correctVal);
+          const wrong = pool.filter(i => i.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+          options = wrong.map(i => ({ content: i.name, item: i }));
+          options.push({ content: correctVal, item: target });
           document.getElementById('quizImage').innerHTML = '';
         } else {
           const propStr = target.props[0];
@@ -1722,8 +1756,9 @@
           const key = propStr.split(': ')[0];
           qText = `Which shape has <b>${key}: ${val}</b>?`;
           correctVal = target.name;
-          options = shapes.filter(s => s.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3).map(s => s.name);
-          options.push(correctVal);
+          const wrong = shapes.filter(s => s.id !== target.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+          options = wrong.map(s => ({ content: s.name, item: s }));
+          options.push({ content: correctVal, item: target });
           document.getElementById('quizImage').innerHTML = '';
         }
       } else {
@@ -1733,12 +1768,11 @@
           qText = `True or False: ${target.name} has ${target.props[0]}?`;
           correctVal = "True";
         } else {
-          // Make a false statement
           const other = shapes.filter(s => s.id !== target.id)[0];
           qText = `True or False: ${target.name} is the same as ${other.name}?`;
           correctVal = "False";
         }
-        options = ["True", "False"];
+        options = [{ content: "True", item: null }, { content: "False", item: null }];
         document.getElementById('quizImage').innerHTML = `<div style="width:100px;">${target.svg}</div>`;
       }
 
@@ -1749,35 +1783,37 @@
       options.sort(() => 0.5 - Math.random()).forEach(opt => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
-        if (opt.includes('<svg')) {
-          btn.innerHTML = `<div style="width:80px; margin:0 auto;">${opt}</div>`;
-          btn.onclick = () => checkQuiz(opt === correctVal, btn);
+        if (opt.content.includes('<svg')) {
+          btn.innerHTML = `<div style="width:80px; margin:0 auto;">${opt.content}</div>`;
         } else {
-          btn.innerText = opt;
-          btn.onclick = () => checkQuiz(opt === correctVal, btn);
+          btn.innerText = opt.content;
         }
+        btn.onclick = () => checkQuiz(opt.content === correctVal, btn, opt.item, target, qType);
         oDiv.appendChild(btn);
       });
     }
 
-    function checkQuiz(isCorrect, btn) {
+    function checkQuiz(isCorrect, btn, selectedItem, targetItem, qType) {
       if (isCorrect) {
         btn.classList.add('correct');
         document.getElementById('quizFeedback').innerText = "Correct! Good job.";
         speak("Correct! Good job.");
-        // Auto-advance
         setTimeout(nextQuizQuestion, 1000);
       } else {
         btn.classList.add('wrong');
-
-        // Smart Feedback
-        const wrongVal = btn.innerText;
-        const wrongShape = shapes.find(s => s.name === wrongVal);
         let feedback = "Oops. Try again.";
 
-        if (wrongShape) {
-          // If user picked a shape name, give a hint about that shape
-          feedback = `Not ${wrongShape.name}. It has ${wrongShape.props[0].toLowerCase()}.`;
+        if (selectedItem && selectedItem.explanation) {
+          // Use the offline explanation
+          feedback = `Not quite. That is a ${selectedItem.name}. ${selectedItem.explanation}`;
+        } else if (qType === 3) {
+          // True/False feedback
+          const correctAns = btn.innerText === "True" ? "False" : "True";
+          if (correctAns === "True") {
+            feedback = `Actually, it is True. ${targetItem.name} does have ${targetItem.props[0]}.`;
+          } else {
+            feedback = `Actually, it is False. ${targetItem.name} is different.`;
+          }
         }
 
         document.getElementById('quizFeedback').innerText = feedback;
